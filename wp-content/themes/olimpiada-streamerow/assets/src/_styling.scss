@@ -1,0 +1,57 @@
+html {
+    font-size: 62.5%; //1rem = 10px
+    overflow-x: hidden;
+    // color: $dark;
+    background-color: $primary;
+}
+
+body {
+    font-size: 2rem;
+    overflow-x: hidden;
+    letter-spacing: 0.03rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: $primary;
+    // background-image: url("../img/bg1.webp");
+    // background-repeat: repeat-y;
+    // background-position-x: center;
+    // background-size: 100%;
+}
+
+
+// h1{
+//     font-size: 4.5rem;
+// }
+
+h2{
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.olive-left,.olive-right{
+    width: 10.4rem;
+    height: 2.8rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.olive-left{
+    background-image: url("../img/olive-left.svg");
+}
+.olive-right{
+    background-image: url("../img/olive-right.svg");
+}
+
+
+
+
+.navbar{
+    background-color: transparent;
+}
+
+#footer{
+    background-color: transparent;
+}
