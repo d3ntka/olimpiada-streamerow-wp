@@ -1,26 +1,295 @@
-.title{
+.title {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1;
+}
+.olives {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+// ----------========== NAV ============----------
+.navbar {
+  position: absolute;
+  width: 100%;
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 6rem;
+  gap: 4rem;
+  width: 100%;
+}
+
+.header-brand img {
+  width: 100%;
+  height: auto;
+}
+
+// ----------========== /NAV ============----------
+
+// ----------========== AUX ============----------
+
+// ----------========== /AUX ============----------
+
+// ----------========== SECTIONS ============----------
+
+.s1 {
+  padding-top: 26.5rem;
+  min-height: 90rem;
+  position: relative;
+  .title {
+    font-size: 11.5rem;
+    span {
+      font-size: 6.1rem;
+    }
+  }
+  .olives {
+    gap: 2rem;
+  }
+  .scrolldown{
+      position: absolute;
+      bottom: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &-chevron{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        animation: 3s $transition infinite pulse;
+      }
+  }
+}
+
+@keyframes pulse {
+    0%, 100% {
+      transform: translateY(0rem);
+    }
+    30% {
+        transform: translateY(2rem);
+    }
+  }
+
+.s2 {
+  position: relative;
+  z-index: 30;
+  &a {
+    background-image: url("../img/bg-section-disc.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 12rem;
+    min-height: 65.5rem;
+  }
+  &b {
+    background-image: url("../img/bg-section-vote.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 65.5rem;
+    color: $primary;
     display: grid;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-weight: 600;
-    line-height: 1.0;
-}
-.olives{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .olives {
+      gap: 5rem;
+    }
+  }
 }
 
-.section1{
-    .title{
-        font-size: 8.4rem;
-        span{
-            font-size: 5.1rem;
+.s3 {
+  // background: url("../img/bg-influ.png") $primary;
+  background: $primary url("../img/bg-influ.png");
+  background-blend-mode: color-dodge;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 154.5rem;
+  position: relative;
+  .title {
+    position: relative;
+    align-items: flex-start;
+    padding-top: 7rem;
+    font-size: 5rem;
+    z-index: 5;
+    height: 33rem;
+
+    span {
+      font-size: 4rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 108rem;
+      height: 33rem;
+      background-image: url("../img/bg-influ-txt.svg");
+      background-size: contain;
+      z-index: -1;
+    }
+  }
+
+  .influs {
+    &__wrap {
+      max-width: 1600px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 1fr 0.3fr 1fr 0.3fr;
+    // grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    // max-width: 1500px;
+
+    justify-content: center;
+
+    transition: $transition;
+
+  }
+
+  .influ-1 {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+  .influ-2 {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+  .influ-3 {
+    grid-area: 2 / 3 / 4 / 4;
+  }
+  .influ-4 {
+    grid-area: 1 / 4 / 3 / 5;
+  }
+  .influ-5 {
+    grid-area: 4 / 1 / 6 / 2;
+  }
+  .influ-6 {
+    grid-area: 3 / 2 / 5 / 3;
+  }
+  .influ-7 {
+    grid-area: 4 / 3 / 6 / 4;
+  }
+  .influ-8 {
+    grid-area: 3 / 4 / 5 / 5;
+  }
+
+  .influ {
+    &:hover{
+        .influ__photo{
+            filter: drop-shadow(0px -16px 20px #88fefe);
         }
     }
-}
+    &__wrap{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        transition: $transition;
+        & > img {
+            width: 100%;
+            height: auto;
+            transition: $transition-2;
 
-.section2{
+          //   position: relative;
+            // margin-top: auto;
+          }
+    }
+    &__meta {
+      position: absolute;
+      bottom: 2.5rem;
+      display: flex;
+      align-items: flex-end;
+      & > i{
+        position: relative;
+        z-index: 15;
+        height: 8.8rem;
+        width: 8.8rem;
+        &>img{
+            width: 100%;
+            height: auto;
+        }
+      }
+      .name {
+        display: inline-block;
+        background-color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-radius: 3rem;
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+        line-height: 1;
+        position: relative;
+        z-index: 14;
+        margin-bottom: 0.5rem;
+      }
+      &--r {
+        right: 2.5rem;
+        .name{
+            padding-left: 2.5rem;
+            padding-right: 5rem;
+            transform: translateX(4rem);
+        }
+      }
+      &--l {
+        left: 2.5rem;
+        .name{
+            padding-left: 5rem;
+            padding-right: 2.5rem;
+            transform: translateX(-4rem);
+        }
+      }
+    }
+    // &::after {
+    //   position: absolute;
+    //   bottom: 2.5rem;
+    //   background-image: url("../img/icon-twitch.png");
+    // }
+  }
 
+  @include media-breakpoint-down(xl) {
+    .influs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 0.3fr 1fr 0.3fr 1fr 0.3fr 1fr 0.5fr 1fr 0.5fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 30px;
+    }
+
+    .influ-1 {
+      grid-area: 1 / 2 / 3 / 3;
+    }
+    .influ-2 {
+      grid-area: 2 / 1 / 4 / 2;
+    }
+    .influ-3 {
+      grid-area: 3 / 2 / 5 / 3;
+    }
+    .influ-4 {
+      grid-area: 4 / 1 / 6 / 2;
+    }
+    .influ-5 {
+      grid-area: 5 / 2 / 7 / 3;
+    }
+    .influ-6 {
+      grid-area: 6 / 1 / 8 / 2;
+    }
+    .influ-7 {
+      grid-area: 7 / 2 / 9 / 3;
+    }
+    .influ-8 {
+      grid-area: 8 / 1 / 10 / 2;
+    }
+  }
 }

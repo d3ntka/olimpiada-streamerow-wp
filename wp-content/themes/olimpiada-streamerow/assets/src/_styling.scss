@@ -3,6 +3,12 @@ html {
     overflow-x: hidden;
     // color: $dark;
     background-color: $primary;
+    @include media-breakpoint-down(md){
+        font-size: 45%;
+    }
+    @include media-breakpoint-down(md){
+        font-size: 35%;
+    }
 }
 
 body {
@@ -28,11 +34,18 @@ h2{
     font-weight: 600;
 }
 
+h3{
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+
+
 .text-center{
     text-align: center;
 }
 
-.olive-left,.olive-right{
+.olive-left,.olive-right,.olive-left-dark,.olive-right-dark{
     width: 10.4rem;
     height: 2.8rem;
     background-repeat: no-repeat;
@@ -44,9 +57,20 @@ h2{
 .olive-right{
     background-image: url("../img/olive-right.svg");
 }
+.olive-left-dark{
+    background-image: url("../img/olive-left-dark.svg");
+}
+.olive-right-dark{
+    background-image: url("../img/olive-right-dark.svg");
+}
 
 
-
+.text-white{
+    color: #fff;
+}
+.text-primary{
+    color: $primary;
+}
 
 .navbar{
     background-color: transparent;
@@ -54,4 +78,41 @@ h2{
 
 #footer{
     background-color: transparent;
+}
+
+.button{
+    font-family: "Poppins";
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 3.3rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    height: 10rem;
+    width: 53.4rem;
+    clip-path: polygon(0 0, 100% 7%, 94% 86%, 9% 100%);
+    background-color: $secondary;
+    transition: $transition;
+    &:hover{
+        clip-path: polygon(10% 10%, 89% 9%, 100% 92%, 0 90%);
+        // clip-path: polygon(15% 5%, 95% 5%, 85% 95%, 5% 95%);
+    }
+}
+
+.line-start,.line-end{
+    background-image: url("../img/line.png");
+    // background-size: auto;
+    height: 11.23px;
+    width: 100%;
+    position: absolute;
+    background-repeat: repeat-x;
+    left: 0;
+}
+
+.line-start{
+    top: 0;    
+}
+.line-end{
+    bottom: 0;
 }

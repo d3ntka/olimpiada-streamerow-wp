@@ -6,4 +6,7 @@ $navbar-dark-hover-color: $secondary;
 $navbar-dark-disabled-color: rgba(255,255,255, 0.3);
 $navbar-dark-active-color: transparent;
 
+$transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+$transition-2: 380ms cubic-bezier(0.41, 0.06, 0.35, 0.99);
+
 // $link-hover-color: $orange;

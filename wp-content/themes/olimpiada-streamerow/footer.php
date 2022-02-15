@@ -19,7 +19,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<p><?php printf( esc_html__( '&copy; %1$s %2$s. All rights reserved.', 'olimpiada-streamerow' ), date_i18n( 'Y' ), get_bloginfo( 'name', 'display' ) ); ?></p>
 					</div>
 
 					<?php

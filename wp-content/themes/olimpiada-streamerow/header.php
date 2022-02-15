@@ -9,7 +9,7 @@
 
 <?php
 	$navbar_scheme   = get_theme_mod( 'navbar_scheme', 'navbar-light bg-light' ); // Get custom meta-value.
-	$navbar_position = get_theme_mod( 'navbar_position', 'static' ); // Get custom meta-value.
+	$navbar_position = get_theme_mod( 'navbar_position', 'fixed' ); // Get custom meta-value.
 
 	$search_enabled  = get_theme_mod( 'search_enabled', '1' ); // Get custom meta-value.
 ?>
@@ -24,7 +24,20 @@
 	<header>
 		<nav id="header" class="navbar navbar-expand-md navbar-dark <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container">
-				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<div class="header-brand">
+					<div class="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/olimpiada.webp" alt="">
+					</div>
+					<div class="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/poweredbytiger.webp" alt="">
+					</div>
+				</div>
+
+
+
+
+
+				<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
 						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
 
@@ -36,13 +49,14 @@
 							echo esc_attr( get_bloginfo( 'name', 'display' ) );
 						endif;
 					?>
-				</a>
+				</a> -->
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'olimpiada-streamerow' ); ?>">
+				
+				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'olimpiada-streamerow' ); ?>">
 					<span class="navbar-toggler-icon"></span>
-				</button>
+				</button> -->
 
-				<div id="navbar" class="collapse navbar-collapse">
+				<!-- <div id="navbar" class="collapse navbar-collapse">
 					<?php
 						// Loading WordPress Custom Menu (theme_location).
 						wp_nav_menu(
@@ -55,7 +69,8 @@
 							)
 						);
 					?>
-				</div><!-- /.navbar-collapse -->
+				</div>  -->
+				<!-- /.navbar-collapse -->
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
 	</header>
