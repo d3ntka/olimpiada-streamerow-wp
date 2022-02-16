@@ -17,6 +17,7 @@
 .navbar {
   position: absolute;
   width: 100%;
+  z-index: 500;
 }
 .header-brand {
   display: flex;
@@ -34,9 +35,42 @@
 
 // ----------========== /NAV ============----------
 
+
+
 // ----------========== AUX ============----------
 
+.aux{
+  // position: absolute;
+  // width: 100vw;
+  .aux-left{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-image: url("../img/aux-left.webp");
+    background-size: contain;
+    background-repeat: repeat-y;
+    width: 11rem;
+    z-index: 4;
+  }
+  .aux-right{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-image: url("../img/aux-right.webp");
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: right;
+    width: 11rem;
+    z-index: 4;
+  }
+
+}
+
 // ----------========== /AUX ============----------
+
+
 
 // ----------========== SECTIONS ============----------
 
@@ -79,31 +113,103 @@
     }
   }
 
+
+
+
+// ++SEKCJA VOTING++
+
 .s2 {
   position: relative;
   z-index: 30;
   &a {
-    background-image: url("../img/bg-section-disc.png");
+    background-image: url("../img/bg-section-disc.webp");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: relative;
     padding-top: 12rem;
-    min-height: 65.5rem;
+    min-height: 100rem;
+    .olives{
+      gap: 2.4rem
+    }
+    .title{
+      margin-bottom: 2rem;
+      h2{
+        line-height: 1;
+      }
+    }
+    p{
+      font-size: 2.5rem;
+    }
+
+    &__content{
+      // display: flex;
+      // justify-content: center;
+      // position: relative;
+      max-width: 100%;
+      height: 100%;
+      bottom: 0;
+      display: flex;
+      align-items: flex-end;
+      // justify-content: center;
+      &--img{
+        // position: absolute;
+        // bottom: 0;
+        // left: 50%;
+        max-width: 100%;
+        // transform: translateY();
+      }
+    }
+    &__games{
+      // max-width: 100%;
+      position: absolute;
+      bottom: -5rem;
+      left: 20%;
+      height: auto;
+      width: 69rem;
+      max-width: 100%;
+      // transform: translateX(-50%);
+    }
+    &__shini{
+      position: absolute;
+      bottom: 0;
+      right: 8%;
+      height: auto;
+      width: 71rem;
+      max-width: 100%;
+    }
   }
   &b {
-    background-image: url("../img/bg-section-vote.png");
+    background-image: url("../img/bg-section-vote.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 65.5rem;
+    background-position: center;
+    min-height: 102rem;
     color: $primary;
     display: grid;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    padding-bottom: 13rem;
+    position: relative;
+    z-index: 30;
     .olives {
       gap: 5rem;
     }
+    .title{
+      h3{
+        margin-bottom: 3.5rem;
+      }
+    }
   }
 }
+
+// --SEKCJA VOTING--
+
+
+
+
+
+// ++SEKCJA INFLUENCERZY++
 
 .s3 {
   // background: url("../img/bg-influ.png") $primary;
@@ -111,8 +217,10 @@
   background-blend-mode: color-dodge;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 154.5rem;
+  min-height: 134.5rem;
   position: relative;
+  padding-bottom: 6rem;
+  z-index: 3;
   .title {
     position: relative;
     align-items: flex-start;
@@ -139,10 +247,12 @@
   }
 
   .influs {
+    position: relative;
+    z-index: 15;
     &__wrap {
-      max-width: 1600px;
-      padding-left: 50px;
-      padding-right: 50px;
+      max-width: 1700px;
+      padding-left: 100px;
+      padding-right: 100px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -185,6 +295,9 @@
   }
 
   .influ {
+    &__photo{
+      transition: 0.3s $transition-2;
+    }
     &:hover{
         .influ__photo{
             filter: drop-shadow(0px -16px 20px #88fefe);
@@ -195,6 +308,7 @@
         display: inline-block;
         width: 100%;
         transition: $transition;
+        z-index: 14;
         & > img {
             width: 100%;
             height: auto;
@@ -293,3 +407,36 @@
     }
   }
 }
+
+// --SEKCJA INFLUENCERZY--
+
+
+
+
+
+
+// ++SEKCJA DISCORD++
+
+.s4{
+  // background-image: url("../img/bg-s4.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // min-height: 78rem;
+  position: relative;
+  margin-bottom: 7rem;
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .discord{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-50%, 50%);
+  }
+}
+
+// --SEKCJA DISCORD--
