@@ -39,7 +39,7 @@ the_post();
 			<!-- <img class="s2a__content--img" src="<?php echo get_template_directory_uri(); ?>/assets/img/s2-cont.webp" alt=""> -->
 
 		</div>
-
+		<div class="s2a--spacing"></div>
 		</div>
 	</div>
 	<div class="s2b">
