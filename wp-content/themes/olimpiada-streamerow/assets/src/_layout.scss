@@ -18,6 +18,45 @@
   position: absolute;
   width: 100%;
   z-index: 500;
+  .navbar-custom{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    .menu-item{
+      list-style: none;
+      text-align: center;
+      &:hover{
+        .nav-link{
+          color: $secondary;
+        }
+      }
+    }
+    .nav-link{
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: "Poppins";
+      color: #fff;
+
+    }
+    // flex-direction: row;
+    @include media-breakpoint-down(xl){
+      .menu-item:first-child{
+        text-align: end;
+      }
+      .menu-item:last-child{
+        text-align: start;
+      }
+
+      // a{
+      //   display: flex;
+      //   justify-content: center;
+      // }
+    }
+  }
 }
 
 .nav-brand {
@@ -31,10 +70,10 @@
 .header-padding {
   padding-top: 6rem;
 }
-.footer-padding {
-  padding-bottom: 17.5rem;
-}
 
+.navbar-loc{
+  flex-wrap: wrap;
+}
 
 
 .nav-brand img {
@@ -58,6 +97,18 @@
   }
 }
 
+#footer{
+  background-image: url("../img/bg-footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer-padding {
+  padding-bottom: 17.5rem;
+  @include media-breakpoint-down(lg){
+  padding-bottom: 7.5rem;
+  }
+}
 .footer-cfa{
   width: 18.3rem;
   height: auto;
@@ -66,7 +117,12 @@
   width: 32.6rem;
   height: auto;
 }
-
+.footer-cfa,
+.footer-tiger{
+@include media-breakpoint-down(xl){
+  transform: translateY(-5rem);
+  }
+}
 // ----------========== /NAV ============----------
 
 // ----------========== AUX ============----------
@@ -461,14 +517,14 @@
 // ++SEKCJA DISCORD++
 
 .s-dc {
-  // background-image: url("../img/bg-s4.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  // min-height: 78rem;
   position: relative;
-  // margin-bottom: 7rem;
   z-index: 50;
+  &__img{
+    display: grid;
+    justify-content: center;
+    @include media-breakpoint-down(md){
+    }
+  }
   img {
     width: 100%;
     height: auto;
@@ -503,3 +559,52 @@
 }
 
 // --SEKCJA DISCORD--
+
+
+
+
+// ++SEKCJA GŁOSOWANIE++
+
+.s-voting{
+  min-height: 135.8rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $primary url("../img/bg-influ.png");
+    background-blend-mode: color-dodge;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // z-index: -1;
+  }
+  &__content{
+    position: relative;
+    z-index: 30;
+  }
+  h1{
+    font-size: 5.9rem;
+    font-weight: 600;
+  }
+  p{
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    line-height: 1.1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// --SEKCJA GŁOSOWANIE--

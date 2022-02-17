@@ -24,49 +24,33 @@
 	<header>
 		<nav id="header" class="navbar navbar-expand-md navbar-dark <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="nav__wrap">
-				<div class="nav-brand header-padding">
-					<div class="">
+				<div class="nav-brand navbar-loc header-padding row">
+					<div class="col-5 col-xl-3 order-0">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/olimpiada.webp" alt="">
 					</div>
-					<div class="">
+
+					<div id="navbar" class="col-12 col-xl-auto order-3 order-xl-1">
+						<?php
+							// Loading WordPress Custom Menu (theme_location).
+							wp_nav_menu(
+								array(
+									'theme_location' => 'main-menu',
+									'container'      => '',
+									'menu_class'     => 'navbar-custom mx-auto',
+									'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
+									'walker'         => new WP_Bootstrap_Navwalker(),
+								)
+							);
+						?>
+					</div> 
+
+					<div class="col-5 col-xl-3 order-2">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/poweredbytiger.webp" alt="">
 					</div>
 				</div>
 
-
-				<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php
-						$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
-
-						if ( ! empty( $header_logo ) ) :
-					?>
-						<img src="<?php echo esc_url( $header_logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
-					<?php
-						else :
-							echo esc_attr( get_bloginfo( 'name', 'display' ) );
-						endif;
-					?>
-				</a> -->
-
 				
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'olimpiada-streamerow' ); ?>">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div id="navbar" class="collapse navbar-collapse">
-					<?php
-						// Loading WordPress Custom Menu (theme_location).
-						wp_nav_menu(
-							array(
-								'theme_location' => 'main-menu',
-								'container'      => '',
-								'menu_class'     => 'navbar-nav me-auto',
-								'fallback_cb'    => 'WP_Bootstrap_Navwalker::fallback',
-								'walker'         => new WP_Bootstrap_Navwalker(),
-							)
-						);
-					?>
-				</div> 
+				
 				<!-- /.navbar-collapse -->
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
@@ -83,3 +67,29 @@
 		<?php
 			endif;
 		?>
+
+<div class="aux">
+	<div class="aux-left"></div>
+	<div class="aux-right"></div>
+</div>
+
+<section class="s-hero">
+	<div class="title">
+		<div class="olives">
+			<i class="olive-left"></i>
+			<span>
+				Igrzyska
+			</span>
+			<i class="olive-right"></i>
+		</div>
+		<span class="title--lower">rozpoczęte!</span>
+	</div>
+	<div class="s-hero__heroes">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/heroes.png" alt="">
+
+	</div>
+	<div class="scrolldown">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/mouse.svg" alt="">
+		<img class="scrolldown-chevron" src="<?php echo get_template_directory_uri(); ?>/assets/img/chevron.svg" alt="">
+	</div>
+</section>

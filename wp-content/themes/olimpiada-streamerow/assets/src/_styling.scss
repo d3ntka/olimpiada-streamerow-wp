@@ -45,7 +45,7 @@ h3{
     text-align: center;
 }
 
-.olive-left,.olive-right,.olive-left-dark,.olive-right-dark{
+.olive-left,.olive-right,.olive-left-dark,.olive-right-dark,.olive-left-gold,.olive-right-gold{
     width: 10.4rem;
     height: 2.8rem;
     background-repeat: no-repeat;
@@ -63,6 +63,12 @@ h3{
 .olive-right-dark{
     background-image: url("../img/olive-right-dark.svg");
 }
+.olive-left-gold{
+    background-image: url("../img/olive-left-gold.svg");
+}
+.olive-right-gold{
+    background-image: url("../img/olive-right-gold.svg");
+}
 
 
 .text-white{
@@ -70,6 +76,9 @@ h3{
 }
 .text-primary{
     color: $primary;
+}
+.text-secondary{
+    color: $secondary;
 }
 
 .navbar{
@@ -116,4 +125,11 @@ h3{
 }
 .line-end{
     bottom: 0;
+}
+
+
+.title{
+    @include media-breakpoint-down(md){
+        font-size: smaller;
+    }
 }
