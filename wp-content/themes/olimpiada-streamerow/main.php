@@ -16,7 +16,7 @@ the_post();
 	<div class="aux-right"></div>
 </div>
 
-<section class="s1">
+<section class="s-hero">
 	<div class="title">
 		<div class="olives">
 			<i class="olive-left"></i>
@@ -25,9 +25,10 @@ the_post();
 			</span>
 			<i class="olive-right"></i>
 		</div>
-		rozpoczęte!
+		<span class="title--lower">rozpoczęte!</span>
 	</div>
-	<div class="people">
+	<div class="s-hero__heroes">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/heroes.png" alt="">
 
 	</div>
 	<div class="scrolldown">
@@ -175,12 +176,16 @@ the_post();
 
 </section>
 
-<section class="s4">
+<section class="s-dc">
+	<div class="s-dc__tigerki">
+		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/tigerki-dc.webp" alt="">
+
+	</div>
 	<img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg-s4.webp" alt="">
 	<div class="discord">
 		<div class="olives">
 			<i class="olive-left"></i>
-			<a class="button text-white" href="">Zagłosuj</a>
+			<a class="button text-white" target="_blank" href="https://discord.gg/geHDwRaHKt">Wbij na Discord</a>
 			<i class="olive-right"></i>
 		</div>
 	</div>

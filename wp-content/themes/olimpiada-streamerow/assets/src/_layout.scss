@@ -19,30 +19,62 @@
   width: 100%;
   z-index: 500;
 }
-.header-brand {
+
+.nav-brand {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 6rem;
   gap: 4rem;
   width: 100%;
 }
 
-.header-brand img {
+.header-padding {
+  padding-top: 6rem;
+}
+.footer-padding {
+  padding-bottom: 17.5rem;
+}
+
+
+
+.nav-brand img {
   width: 100%;
+  height: auto;
+}
+
+.nav__wrap {
+  max-width: 1620px;
+  width: 100%;
+  padding-left: 11rem;
+  padding-right: 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.footer-cfa{
+  width: 18.3rem;
+  height: auto;
+}
+.footer-tiger{
+  width: 32.6rem;
   height: auto;
 }
 
 // ----------========== /NAV ============----------
 
-
-
 // ----------========== AUX ============----------
 
-.aux{
+.aux {
   // position: absolute;
   // width: 100vw;
-  .aux-left{
+  .aux-left {
     position: fixed;
     top: 0;
     left: 0;
@@ -53,7 +85,7 @@
     width: 11rem;
     z-index: 4;
   }
-  .aux-right{
+  .aux-right {
     position: fixed;
     top: 0;
     right: 0;
@@ -65,62 +97,73 @@
     width: 11rem;
     z-index: 4;
   }
-
 }
 
 // ----------========== /AUX ============----------
 
-
-
 // ----------========== SECTIONS ============----------
 
-.s1 {
+.s-hero {
   padding-top: 26.5rem;
-  min-height: 90rem;
+  // min-height: 90rem;
+  background-image: url("../img/bg-section-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
+  z-index: 50;
   .title {
-    font-size: 11.5rem;
-    span {
-      font-size: 6.1rem;
+    font-size: 6.1rem;
+    .title--lower {
+      line-height: 0.8;
+      font-size: 11.5rem;
     }
   }
   .olives {
     gap: 2rem;
   }
-  .scrolldown{
-      position: absolute;
-      bottom: 4rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      &-chevron{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        animation: 3s $transition infinite pulse;
-      }
+  &__heroes {
+    display: flex;
+    @media (min-width: 1900px) {
+      margin-top: -9rem;
+    }
+    img {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .scrolldown {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &-chevron {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      animation: 3s $transition infinite pulse;
+    }
   }
 }
 
 @keyframes pulse {
-    0%, 100% {
-      transform: translateY(0rem);
-    }
-    30% {
-        transform: translateY(2rem);
-    }
+  0%,
+  100% {
+    transform: translateY(0rem);
   }
-
-
-
+  30% {
+    transform: translateY(2rem);
+  }
+}
 
 // ++SEKCJA VOTING++
 
 .s2 {
   position: relative;
-  z-index: 30;
   &a {
     background-image: url("../img/bg-section-disc.webp");
     background-repeat: no-repeat;
@@ -129,20 +172,21 @@
     position: relative;
     padding-top: 12rem;
     min-height: 100rem;
-    .olives{
-      gap: 2.4rem
+    z-index: 31;
+    .olives {
+      gap: 2.4rem;
     }
-    .title{
+    .title {
       margin-bottom: 2rem;
-      h2{
+      h2 {
         line-height: 1;
       }
     }
-    p{
+    p {
       font-size: 2.5rem;
     }
 
-    &__content{
+    &__content {
       // display: flex;
       // justify-content: center;
       // position: relative;
@@ -152,7 +196,7 @@
       display: flex;
       align-items: flex-end;
       // justify-content: center;
-      &--img{
+      &--img {
         // position: absolute;
         // bottom: 0;
         // left: 50%;
@@ -160,7 +204,7 @@
         // transform: translateY();
       }
     }
-    &__games{
+    &__games {
       // max-width: 100%;
       position: absolute;
       bottom: -5rem;
@@ -168,9 +212,10 @@
       height: auto;
       width: 69rem;
       max-width: 100%;
+      z-index: 32;
       // transform: translateX(-50%);
     }
-    &__shini{
+    &__shini {
       position: absolute;
       bottom: 0;
       right: 8%;
@@ -195,8 +240,8 @@
     .olives {
       gap: 5rem;
     }
-    .title{
-      h3{
+    .title {
+      h3 {
         margin-bottom: 3.5rem;
       }
     }
@@ -205,22 +250,26 @@
 
 // --SEKCJA VOTING--
 
-
-
-
-
 // ++SEKCJA INFLUENCERZY++
 
 .s3 {
   // background: url("../img/bg-influ.png") $primary;
-  background: $primary url("../img/bg-influ.png");
-  background-blend-mode: color-dodge;
-  background-repeat: no-repeat;
-  background-size: cover;
+
   min-height: 134.5rem;
   position: relative;
   padding-bottom: 6rem;
-  z-index: 3;
+  // z-index: 20;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $primary url("../img/bg-influ.png");
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // z-index: -1;
+  }
   .title {
     position: relative;
     align-items: flex-start;
@@ -266,7 +315,6 @@
     justify-content: center;
 
     transition: $transition;
-
   }
 
   .influ-1 {
@@ -295,42 +343,42 @@
   }
 
   .influ {
-    &__photo{
+    &__photo {
       transition: 0.3s $transition-2;
     }
-    &:hover{
-        .influ__photo{
-            filter: drop-shadow(0px -16px 20px #88fefe);
-        }
+    &:hover {
+      .influ__photo {
+        filter: drop-shadow(0px -16px 20px $tertiary);
+      }
     }
-    &__wrap{
-        position: relative;
-        display: inline-block;
+    &__wrap {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      transition: $transition;
+      z-index: 14;
+      & > img {
         width: 100%;
-        transition: $transition;
-        z-index: 14;
-        & > img {
-            width: 100%;
-            height: auto;
-            transition: $transition-2;
+        height: auto;
+        transition: $transition-2;
 
-          //   position: relative;
-            // margin-top: auto;
-          }
+        //   position: relative;
+        // margin-top: auto;
+      }
     }
     &__meta {
       position: absolute;
       bottom: 2.5rem;
       display: flex;
       align-items: flex-end;
-      & > i{
+      & > i {
         position: relative;
         z-index: 15;
         height: 8.8rem;
         width: 8.8rem;
-        &>img{
-            width: 100%;
-            height: auto;
+        & > img {
+          width: 100%;
+          height: auto;
         }
       }
       .name {
@@ -350,18 +398,18 @@
       }
       &--r {
         right: 2.5rem;
-        .name{
-            padding-left: 2.5rem;
-            padding-right: 5rem;
-            transform: translateX(4rem);
+        .name {
+          padding-left: 2.5rem;
+          padding-right: 5rem;
+          transform: translateX(4rem);
         }
       }
       &--l {
         left: 2.5rem;
-        .name{
-            padding-left: 5rem;
-            padding-right: 2.5rem;
-            transform: translateX(-4rem);
+        .name {
+          padding-left: 5rem;
+          padding-right: 2.5rem;
+          transform: translateX(-4rem);
         }
       }
     }
@@ -410,32 +458,47 @@
 
 // --SEKCJA INFLUENCERZY--
 
-
-
-
-
-
 // ++SEKCJA DISCORD++
 
-.s4{
+.s-dc {
   // background-image: url("../img/bg-s4.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   // min-height: 78rem;
   position: relative;
-  margin-bottom: 7rem;
-  img{
+  // margin-bottom: 7rem;
+  z-index: 50;
+  img {
     width: 100%;
     height: auto;
   }
-  .discord{
+  .discord {
+    position: relative;
+    padding-bottom: 14rem;
+    .olives {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__tigerki {
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    transform: translate(-50%, 50%);
+    top: 0;
+    left: 20%;
+    transform: translate(-110%, -42%);
+    img {
+      max-width: 100%;
+      width: 37.9rem;
+      height: auto;
+    }
+    @media screen and (min-width: 1920px) {
+      left: 0;
+      transform: translate(0, -42%);
+    }
   }
 }
 

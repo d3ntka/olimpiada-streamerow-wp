@@ -16,11 +16,15 @@
 			?>
 		</main><!-- /#main -->
 		<footer id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
+			<div class="nav__wrap">
+				<div class="nav-brand footer-padding">
+					<div class="footer-cfa">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer-cfa.png" alt="">
 					</div>
-
+					<div class="footer-tiger">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/footer-tiger.png" alt="">
+					</div>
+				</div>
 					<?php
 						if ( has_nav_menu( 'footer-menu' ) ) : // See function register_nav_menus() in functions.php
 							/*
@@ -40,24 +44,7 @@
 								)
 							);
 						endif;
-
-						if ( is_active_sidebar( 'third_widget_area' ) ) :
 					?>
-						<div class="col-md-12">
-							<?php
-								dynamic_sidebar( 'third_widget_area' );
-
-								if ( current_user_can( 'manage_options' ) ) :
-							?>
-								<span class="edit-link"><a href="<?php echo esc_url( admin_url( 'widgets.php' ) ); ?>" class="badge badge-secondary"><?php esc_html_e( 'Edit', 'olimpiada-streamerow' ); ?></a></span><!-- Show Edit Widget link -->
-							<?php
-								endif;
-							?>
-						</div>
-					<?php
-						endif;
-					?>
-				</div><!-- /.row -->
 			</div><!-- /.container -->
 		</footer><!-- /#footer -->
 	</div><!-- /#wrapper -->

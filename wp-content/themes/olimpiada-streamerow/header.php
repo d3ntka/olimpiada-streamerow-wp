@@ -23,8 +23,8 @@
 <div id="wrapper">
 	<header>
 		<nav id="header" class="navbar navbar-expand-md navbar-dark <?php if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
-			<div class="container">
-				<div class="header-brand">
+			<div class="nav__wrap">
+				<div class="nav-brand header-padding">
 					<div class="">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/olimpiada.webp" alt="">
 					</div>
@@ -32,9 +32,6 @@
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/poweredbytiger.webp" alt="">
 					</div>
 				</div>
-
-
-
 
 
 				<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -52,11 +49,11 @@
 				</a> -->
 
 				
-				<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'olimpiada-streamerow' ); ?>">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'olimpiada-streamerow' ); ?>">
 					<span class="navbar-toggler-icon"></span>
-				</button> -->
+				</button>
 
-				<!-- <div id="navbar" class="collapse navbar-collapse">
+				<div id="navbar" class="collapse navbar-collapse">
 					<?php
 						// Loading WordPress Custom Menu (theme_location).
 						wp_nav_menu(
@@ -69,7 +66,7 @@
 							)
 						);
 					?>
-				</div>  -->
+				</div> 
 				<!-- /.navbar-collapse -->
 			</div><!-- /.container -->
 		</nav><!-- /#header -->
