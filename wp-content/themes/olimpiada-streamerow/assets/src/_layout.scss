@@ -566,7 +566,7 @@
 // ++SEKCJA GŁOSOWANIE++
 
 .s-voting{
-  min-height: 135.8rem;
+  // min-height: 135.8rem;
   position: relative;
   &::before {
     content: "";
@@ -582,6 +582,8 @@
     // z-index: -1;
   }
   &__content{
+    padding-top: 11rem;
+    padding-bottom: 10rem;
     position: relative;
     z-index: 30;
   }

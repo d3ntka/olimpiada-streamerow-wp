@@ -26,7 +26,9 @@
 			<div class="nav__wrap">
 				<div class="nav-brand navbar-loc header-padding row">
 					<div class="col-5 col-xl-3 order-0">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/olimpiada.webp" alt="">
+						<a href="<?php echo esc_url( home_url() ); ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/img/olimpiada.webp" alt="">
+						</a>	
 					</div>
 
 					<div id="navbar" class="col-12 col-xl-auto order-3 order-xl-1">

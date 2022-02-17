@@ -1,0 +1,213 @@
+$border-radius: 8px;
+
+
+.votes{
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 9rem;
+    
+    z-index: 50;
+    &__header{
+        text-align: center;
+    }
+    .wp-polls-ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 5rem auto;
+        max-width: 1500px;
+        padding-left: 11rem;
+        padding-right: 11rem;
+
+        li{
+            // background-color: $primary;
+            // border-radius: $border-radius;
+            position: relative;
+            label{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                color: #fff;
+                font-size: 1.8rem;
+                font-weight: 600;
+                padding: 2rem;
+                width: 19rem;
+                height: 19rem;
+                text-align: center;
+                padding-bottom: 9rem;
+                line-height: 1.1;
+                // border-radius: $border-radius;
+                // .overlay{
+                //     position: absolute;
+                //     width: calc(100% - 1.6rem);
+                //     height: calc(100% - 1.6rem);
+                //     opacity: 0.0;
+                //     top: 0;
+                //     left: 0;
+                //     margin: 0.8rem;
+                //     border: 3px solid #fff;
+                //     border-radius: $border-radius;
+                //     transition: $transition;
+                // }
+            }
+            &.pointer{
+                label{
+                    cursor: pointer;
+                }
+            }
+            .vote-btn{
+                position: absolute;
+                bottom: 0;
+                background-color: #fff;
+                border-radius: 25px;
+                color: $primary;
+                padding: 1rem 4rem;
+                font-size: 2.5rem;
+                font-weight: 600;
+                transition: 0.3s ease;
+            }
+            &:hover,&:active{
+                .vote-btn{
+                    background-color: $secondary;
+                }
+            }
+        }
+
+            
+        /* Hide the browser's default checkbox */
+        li input {
+            position: absolute;
+            opacity: 0;
+            // cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        /* When the checkbox is checked, add overlay */
+
+        li:hover input ~ .vote-btn {
+            background-color: $secondary;
+        }
+        li input:checked{
+
+        }
+        li input:checked ~ .vote-btn {
+            background-color: $secondary;
+        }
+        li .vote-btn.on{
+            opacity: 1;
+        }
+
+    }
+    .Buttons{
+        margin: 5rem auto;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.7rem 8rem;
+        text-align: center;
+        border: none;
+        border-radius: 4.5rem;
+        color: #primary;
+        font-size: 2.2rem;
+        font-weight: 600;
+        letter-spacing: 0.06rem;
+        transition: $transition;
+        &:hover{
+            background-color: $secondary;
+        }
+    }
+    .text-btn{
+        color: #fff;
+        text-transform: uppercase;
+        &:hover{
+            color: $secondary;
+        }
+    }
+    .poll__results{
+
+        &--wrap{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: inherit;
+            padding-left: inherit;
+            padding-right: inherit;
+        }
+        display: grid;
+        width: 100%;
+        align-items: center;
+        &--bar{
+            width: 100%;
+            // border: 2px solid #fff;
+            border-radius: $border-radius;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 14px;
+            position: relative;
+            .pollbar{
+                border-radius: $border-radius;
+                height: 14px;
+                // margin-left: -1px;
+                // margin-right: -1px;
+                // padding-left: 1px;
+                // padding-right: 2px;
+                min-width: 5%;
+                &::after{
+                    content: "";
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    border-radius: $border-radius;
+                    position: absolute;
+                    border: 2px solid #fff;
+                    height: 100%;
+                    background-color: rgba(#fff,0.3);
+                }
+            }
+        }
+        &--percent{
+            display: block;
+            align-items: center;
+            // padding-left: 1rem;
+            line-height: 1;
+            margin-top: -3px;
+            font-size: 2.5rem;
+            padding-top: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    ul{
+        li{ 
+            &:nth-child(1) label{
+                background: url( '../img/vote-1.png');
+            }
+            &:nth-child(2) label{
+                background: url( '../img/vote-2.png');
+            }
+            &:nth-child(3) label{
+                background: url( '../img/vote-3.png');
+            }
+            &:nth-child(4) label{
+                background: url( '../img/vote-4.png');
+            }
+            &:nth-child(5) label{
+                background: url( '../img/vote-5.png');
+            }
+            &:nth-child(6) label{
+                background: url( '../img/vote-6.png');
+            }
+            &:nth-child(n) label{
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-size: contain;
+            }
+        }
+    }
+}
