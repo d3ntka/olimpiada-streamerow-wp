@@ -20,8 +20,7 @@ the_post();
 			<div class="olives">
 				<i class="olive-left"></i>
 				<h2>
-					Znamy dwie konkurencje,<br>
-					a resztę <u>wybierzecie WY!</u> 
+					Czym jest Olimpiada Streamerów?
 				</h2>
 				<i class="olive-right"></i>
 			</div>
@@ -29,7 +28,9 @@ the_post();
 		<div class="row justify-content-center">
 			<div class="col-8 text-center">
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ut voluptates quos dolor,
+				Olimpiada Streamerów to 5 emomocjonujących konkurencji, w których ósemka naszych dzielnych Olimpijczyków zawalczy o najwyższy stopień podium i wieczną chwałę. 
+				<br>
+				5 wyzwań, podczas których streamerzy zmierzą się w znane i lubiane tytuły. Dwie dyscypliny znamy już dziś. Resztę wybierzecie wy! Rozsiądźcie się wygodnie, bo zaraz zaczynamy!
 				</p>
 			</div>
 		</div>
@@ -102,7 +103,7 @@ the_post();
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-4.webp" alt="">
 					<div class="influ__meta influ__meta--r">
-						<span class="name">slayprox</span>
+						<span class="name">slayproxx</span>
 						<i><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-twitch.png" alt=""></i>
 					</div>
 				</div>
@@ -147,11 +148,10 @@ the_post();
 	</div>
 
 
-	<div class="harmonogram__wrap" id="#harmonogram">
+	<div class="harmonogram__wrap" id="harmonogram">
 		<div class="harmonogram__influ">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg-harmo.png" alt="">
 			<p>
-				Poznaj<br>
 				<span>Harmonogram:</span>
 			</p>
 		</div>

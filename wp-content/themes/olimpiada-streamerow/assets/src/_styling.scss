@@ -9,6 +9,9 @@ html {
     @include media-breakpoint-down(md){
         font-size: 35%;
     }
+    @media (max-width:320px){
+        font-size: 30%;
+    }
 }
 
 body {

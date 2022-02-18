@@ -13,7 +13,7 @@ the_post();
 
 
 
-<section class="s-voting">
+<section class="s-voting" id="now">
 <div class="s-voting__content">
 	<div class="title">
 		<div class="olives text-secondary">

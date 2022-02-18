@@ -140,6 +140,9 @@
     background-repeat: repeat-y;
     width: 11rem;
     z-index: 4;
+    @include media-breakpoint-down(md){
+      width: 5rem;
+  }
   }
   .aux-right {
     position: fixed;
@@ -152,6 +155,9 @@
     background-position: right;
     width: 11rem;
     z-index: 4;
+    @include media-breakpoint-down(md){
+        width: 5rem;
+    }
   }
 }
 
@@ -162,7 +168,7 @@
 .s-hero {
   padding-top: 26.5rem;
   // min-height: 90rem;
-  background-image: url("../img/bg-section-hero.png");
+  background-image: url("../img/bg-section-hero.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -240,6 +246,7 @@
     }
     p {
       font-size: 2.5rem;
+      line-height: 1.3;
     }
     &--spacing{
       padding-bottom: 69rem;
@@ -272,7 +279,10 @@
       width: 69rem;
       max-width: 100%;
       z-index: 32;
-      // transform: translateX(-50%);
+      @media (min-width:1920px){
+        left: 50%;
+        transform: translateX(-80%);
+      }
     }
     &__shini {
       position: absolute;
@@ -282,6 +292,10 @@
       height: auto;
       width: 71rem;
       max-width: 100%;
+      @media (min-width:1920px){
+        left: 50%;
+        transform: translateX(20%);
+      }
     }
   }
   &b {
@@ -360,11 +374,15 @@
     z-index: 15;
     &__wrap {
       max-width: 1700px;
-      padding-left: 100px;
-      padding-right: 100px;
+      padding-left: 11rem;
+      padding-right: 11rem;
       padding-bottom: 2rem;
       margin-left: auto;
       margin-right: auto;
+      @include media-breakpoint-down(md){
+        padding-left: 6rem;
+        padding-right: 6rem;
+      }
     }
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -606,15 +624,9 @@
 }
 
 
-
-
-
-
-
-
-
-
 // --SEKCJA GŁOSOWANIE--
+
+
 
 // ++HARMONOGRAM++
 
@@ -640,6 +652,9 @@
       font-weight: 600;
       line-height: 1.1;
       text-align: center;
+      @include media-breakpoint-down(md){
+        bottom: 2rem;
+      }
       span{
         font-size: 4.1;
       }
@@ -655,6 +670,9 @@
     justify-content: center;
     align-items: center;
     padding: 10rem 12rem;
+    @include media-breakpoint-down(md){
+      padding: 6rem;
+  }
     &::after{
       content: "";
       height: 63.4rem;
