@@ -317,7 +317,7 @@
 
   min-height: 134.5rem;
   position: relative;
-  padding-bottom: 6rem;
+  // padding-bottom: 6rem;
   // z-index: 20;
   &::before {
     content: "";
@@ -362,6 +362,7 @@
       max-width: 1700px;
       padding-left: 100px;
       padding-right: 100px;
+      padding-bottom: 2rem;
       margin-left: auto;
       margin-right: auto;
     }
@@ -614,3 +615,71 @@
 
 
 // --SEKCJA GŁOSOWANIE--
+
+// ++HARMONOGRAM++
+
+.harmonogram{
+  &__wrap{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 11rem;
+    padding-right: 11rem;
+    position: relative;
+    background: transparent linear-gradient(0deg, #389BC6 0%, #389BC600 100%) 0% 0% no-repeat padding-box;
+    // z-index: 4;
+  }
+  &__influ{
+    position: relative;
+    p{
+      position: absolute;
+      bottom: 5rem;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 3.3rem;
+      font-weight: 600;
+      line-height: 1.1;
+      text-align: center;
+      span{
+        font-size: 4.1;
+      }
+    }
+    img{
+      max-width: 100%;
+    }
+  }
+  &__cont{
+    // min-height: 71rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 12rem;
+    &::after{
+      content: "";
+      height: 63.4rem;
+      width: 28.2rem;
+      position: absolute;
+      right: 20%;
+      top: -50%;
+      transform: translate(130%,-20%);
+      background-image: url("../img/tigerki-harmo.webp");
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 50;
+      @media (min-width:1920px){
+        right: 0;
+        transform: translate(0,0);
+
+      }
+    }
+    img{
+      max-width: 143.6rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+// --HARMONOGRAM--

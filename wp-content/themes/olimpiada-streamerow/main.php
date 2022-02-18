@@ -49,7 +49,7 @@ the_post();
 			</h3>
 			<div class="olives">
 				<i class="olive-left-dark"></i>
-				<a class="button text-white" href="">Zagłosuj</a>
+				<a class="button text-white" href="/vote">Zagłosuj</a>
 				<i class="olive-right-dark"></i>
 			</div>
 		</div>
@@ -58,7 +58,6 @@ the_post();
 
 <section class="s3">
 	<div class="line-start"></div>
-	<div class="line-end"></div>
 	<div class="d-flex justify-content-center">
 		<div class="title text-primary">
 			<div>
@@ -72,7 +71,7 @@ the_post();
 	</div>
 	<div class="influs__wrap">
 		<div class="influs">
-			<a href="//twitch.tv/" target="_blank" class="influ influ-1">
+			<a href="//twitch.tv/tuttekhs" target="_blank" class="influ influ-1">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-1.webp" alt="">
 					<div class="influ__meta influ__meta--r">
@@ -81,7 +80,7 @@ the_post();
 					</div>
 				</div>
 			</a>
-			<a href="//twitch.tv/" target="_blank" class="influ influ-2">
+			<a href="//twitch.tv/kezman22" target="_blank" class="influ influ-2">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-2.webp" alt="">
 					<div class="influ__meta influ__meta--r">
@@ -90,7 +89,7 @@ the_post();
 					</div>
 				</div>
 			</a>
-			<a href="//twitch.tv/" target="_blank" class="influ influ-3">
+			<a href="//twitch.tv/overpow" target="_blank" class="influ influ-3">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-3.webp" alt="">
 					<div class="influ__meta influ__meta--r">
@@ -99,7 +98,7 @@ the_post();
 					</div>
 				</div>
 			</a>
-			<a href="//twitch.tv/" target="_blank" class="influ influ-4">
+			<a href="//twitch.tv/slayproxx" target="_blank" class="influ influ-4">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-4.webp" alt="">
 					<div class="influ__meta influ__meta--r">
@@ -108,7 +107,7 @@ the_post();
 					</div>
 				</div>
 			</a>
-			<a href="//twitch.tv/" target="_blank" class="influ influ-5">
+			<a href="//twitch.tv/gluhammer" target="_blank" class="influ influ-5">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-5.webp" alt="">
 					<div class="influ__meta influ__meta--l">
@@ -117,7 +116,7 @@ the_post();
 					</div>
 				</div>
 			</a>
-			<a href="//twitch.tv/" target="_blank" class="influ influ-6">
+			<a href="//twitch.tv/nieuczesana" target="_blank" class="influ influ-6">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-6.png" alt="">
 					<div class="influ__meta influ__meta--l">
@@ -126,7 +125,7 @@ the_post();
 					</div>
 				</div>
 			</a>
-			<a href="//twitch.tv/" target="_blank" class="influ influ-7">
+			<a href="//twitch.tv/blackfireice" target="_blank" class="influ influ-7">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-7.png" alt="">
 					<div class="influ__meta influ__meta--l">
@@ -135,7 +134,7 @@ the_post();
 					</div>
 				</div>
 			</a>
-			<a href="//twitch.tv/" target="_blank" class="influ influ-8">
+			<a href="//twitch.tv/shini_waifu" target="_blank" class="influ influ-8">
 				<div class="influ__wrap">
 					<img class="influ__photo" src="<?php echo get_template_directory_uri(); ?>/assets/img/influ-8.png" alt="">
 					<div class="influ__meta influ__meta--l">
@@ -148,10 +147,21 @@ the_post();
 	</div>
 
 
-
+	<div class="harmonogram__wrap" id="#harmonogram">
+		<div class="harmonogram__influ">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg-harmo.png" alt="">
+			<p>
+				Poznaj<br>
+				<span>Harmonogram:</span>
+			</p>
+		</div>
+	</div>
 </section>
 
-
+<div class="harmonogram__cont">
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/img/harmonogram.webp" alt="">
+	<div class="line-end"></div>
+</div>
 
 <?php
 get_footer();
