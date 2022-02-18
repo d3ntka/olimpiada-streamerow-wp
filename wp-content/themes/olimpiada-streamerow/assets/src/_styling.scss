@@ -10,7 +10,7 @@ html {
         font-size: 35%;
     }
     @media (max-width:320px){
-        font-size: 30%;
+        font-size: 27.5%;
     }
 }
 
@@ -102,7 +102,9 @@ h3{
     letter-spacing: 0.05rem;
     text-transform: uppercase;
     height: 10rem;
-    width: 53.4rem;
+    max-width: 53.4rem;
+    width: 100%;
+    white-space: nowrap;
     clip-path: polygon(0 0, 100% 7%, 94% 86%, 9% 100%);
     background-color: $secondary;
     transition: $transition;
