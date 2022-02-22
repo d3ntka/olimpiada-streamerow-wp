@@ -30,13 +30,13 @@ the_post();
 				<p>
 				Olimpiada Streamerów to 5 emomocjonujących konkurencji, w których ósemka naszych dzielnych Olimpijczyków zawalczy o najwyższy stopień podium i wieczną chwałę. 
 				<br>
-				5 wyzwań, podczas których streamerzy zmierzą się w znane i lubiane tytuły. Dwie dyscypliny znamy już dziś. Resztę wybierzecie wy! Rozsiądźcie się wygodnie, bo zaraz zaczynamy!
+				5 wyzwań, podczas których streamerzy zmierzą się w znane i lubiane tytuły. Niektóre dyscypliny znamy już dziś. Resztę wybierzecie wy! Rozsiądźcie się wygodnie, bo zaraz zaczynamy!
 				</p>
 			</div>
 		</div>
 		<div class="s2a__content">
 			<img class="s2a__shini" src="<?php echo get_template_directory_uri(); ?>/assets/img/s2-shini.webp" alt="">
-			<img class="s2a__games" src="<?php echo get_template_directory_uri(); ?>/assets/img/s2-games-front.webp" alt="">
+			<img class="s2a__games" src="<?php echo get_template_directory_uri(); ?>/assets/img/games-rounds.png" alt="">
 			<!-- <img class="s2a__content--img" src="<?php echo get_template_directory_uri(); ?>/assets/img/s2-cont.webp" alt=""> -->
 
 		</div>

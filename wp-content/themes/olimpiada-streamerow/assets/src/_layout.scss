@@ -272,16 +272,20 @@
     &__games {
       // max-width: 100%;
       position: absolute;
-      bottom: -5rem;
+      bottom: 14%;
       left: 20%;
-      transform: translateX(-20%);
+      transform: translateX(20%);
       height: auto;
-      width: 69rem;
+      // width: 69rem;
+      width: 28.4rem;
       max-width: 100%;
       z-index: 32;
       @media (min-width:1920px){
+        bottom: 20%;
         left: 50%;
         transform: translateX(-80%);
+        width: 35rem;
+
       }
     }
     &__shini {
