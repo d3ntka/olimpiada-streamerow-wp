@@ -36,7 +36,7 @@ the_post();
 		</div>
 		<div class="s2a__content">
 			<img class="s2a__shini" src="<?php echo get_template_directory_uri(); ?>/assets/img/s2-shini.webp" alt="">
-			<img class="s2a__games" src="<?php echo get_template_directory_uri(); ?>/assets/img/games-rounds.png" alt="">
+			<img class="s2a__games" src="<?php echo get_template_directory_uri(); ?>/assets/img/games-rounds.webp" alt="">
 			<!-- <img class="s2a__content--img" src="<?php echo get_template_directory_uri(); ?>/assets/img/s2-cont.webp" alt=""> -->
 
 		</div>

@@ -186,22 +186,22 @@ $border-radius: 8px;
     ul{
         li{ 
             &:nth-child(1) label{
-                background: url( '../img/vote-1.png');
+                background: url( '../img/games-bg-1.png');
             }
             &:nth-child(2) label{
-                background: url( '../img/vote-2.png');
+                background: url( '../img/games-bg-2.png');
             }
             &:nth-child(3) label{
-                background: url( '../img/vote-3.png');
+                background: url( '../img/games-bg-3.png');
             }
             &:nth-child(4) label{
-                background: url( '../img/vote-4.png');
+                background: url( '../img/games-bg-4.png');
             }
             &:nth-child(5) label{
-                background: url( '../img/vote-5.png');
+                background: url( '../img/games-bg-5.png');
             }
             &:nth-child(6) label{
-                background: url( '../img/vote-6.png');
+                background: url( '../img/games-bg-6.png');
             }
             &:nth-child(n) label{
                 background-repeat: no-repeat;
