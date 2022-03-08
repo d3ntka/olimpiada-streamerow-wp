@@ -1,0 +1,152 @@
+@mixin form--txt{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+
+.s-konkurs{
+    &__content{
+        @extend .cont;
+        padding-top: 17rem;
+        padding-bottom: 11rem;
+
+    }
+
+
+    &__submission{
+        @extend .cont;
+        background-color: $blue;
+        padding-top: 3rem;
+        // padding-bottom: 5rem;
+        color: #fff;
+        label{
+            width: 100%;
+        }
+        .form__name{
+            padding-left: 3rem;
+            @include form--txt;
+        }
+        .submit__wrap{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 8rem;
+            .wpcf7-submit{
+                transform: translateY(50%);
+                @extend .button;
+                border: 0;
+                outline: 0;
+            }
+        }
+        .zgoda{
+            &__wrap{
+                display: flex;
+                align-items: flex-start;
+                font-size: 1.4rem;
+                line-height: 1.2;
+                font-weight: 300;
+                color: rgba($color: #fff, $alpha: .9);
+            }
+        }
+        input[type="text"],
+        input[type="email"],
+        {
+            background-color: $blue-light;
+            border-radius: 2.3rem;
+            padding: 1rem 3rem;
+            outline: 0;
+            border: 0;
+            width: 100%;
+            color: #fff;
+            font-weight: 400;
+        }
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color: #fff !important;
+            opacity: .6;
+            @include form--txt;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #fff !important;
+            opacity: .6;
+            @include form--txt;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #fff !important;
+            opacity: .6;
+            @include form--txt;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color: #fff !important;
+            opacity: .6;
+            @include form--txt;
+        }
+        .codedropz-upload{
+            &-wrapper{
+                background-color: $blue-light;
+                border-radius: 1rem;
+                padding: 2rem;
+            }
+            &-handler{
+                border: 0!important;
+            }
+            &-container{
+                padding: 0;
+                padding-bottom: 1rem;
+            }
+            &-inner{
+                h3{
+                    min-height: 18rem;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    border: 2px dashed #fff;
+                    border-radius: 1rem;
+                    padding-bottom: 1rem;
+                }
+                span{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .codedropz-btn-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cd-upload-btn{
+            @extend .button;
+            width: 30rem;
+            height: 7rem;
+            font-size: 2rem;
+            background-color: #fff;
+        }
+        .dnd-upload-status{
+            padding: 1rem;
+            & .dnd-upload-details span.name{
+                // span{
+                    color: #fff!important;
+                // }
+            }
+            .dnd-upload-image{
+                background-color: #fff;
+                border-color: $secondary;
+            }
+        }
+        .dnd-upload-counter{
+            // left: 50%;
+            right: 50%;
+            transform: translateX(50%);
+            bottom: -5px;
+        }
+        .dnd-progress-bar{
+            span{
+                padding-right: 1rem;
+            }
+        }
+        .dnd-icon-remove::after{
+            background-color: #fff;
+            border-radius: 100%;
+        }
+    }
+}
+// /s-konkurs

@@ -15,21 +15,23 @@
 				endif;
 			?>
 		</main><!-- /#main -->
-		<section class="s-dc">
-			<div class="s-dc__tigerki">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/tigerki-dc.webp" alt="">
-			</div>
-			<div class="s-dc__img">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg-s4.webp" alt="">
-			</div>
-			<div class="discord">
-				<div class="olives">
-					<i class="olive-left"></i>
-					<a class="button text-white" target="_blank" href="https://discord.gg/geHDwRaHKt">Wbij na Discord</a>
-					<i class="olive-right"></i>
+		<?php if (!is_page_template( 'konkurs.php' )): ?>
+			<section class="s-dc">
+				<div class="s-dc__tigerki">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/tigerki-dc.webp" alt="">
 				</div>
-			</div>
-		</section>
+				<div class="s-dc__img">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/bg-s4.webp" alt="">
+				</div>
+				<div class="discord">
+					<div class="olives">
+						<i class="olive-left"></i>
+						<a class="button text-white" target="_blank" href="https://discord.gg/geHDwRaHKt">Wbij na Discord</a>
+						<i class="olive-right"></i>
+					</div>
+				</div>
+			</section>
+		<?php endif ;?>
 		<footer id="footer">
 			<div class="nav__wrap">
 				<div class="nav-brand footer-padding">
