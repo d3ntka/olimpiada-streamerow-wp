@@ -50,7 +50,7 @@ get_header();
 </div>
 
 <div class="s-konkurs__submission">
-	<?php echo do_shortcode('[contact-form-7 id="26" title="Konkurs"]'); ?>
+	<?php echo do_shortcode('[contact-form-7 id="28" title="Konkurs"]'); ?>
 </div>
 
 
