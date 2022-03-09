@@ -69,11 +69,12 @@
 		<?php
 			endif;
 		?>
-
+<?php if (!is_page_template( 'konkurs.php' )): ?>
 <div class="aux">
 	<div class="aux-left"></div>
 	<div class="aux-right"></div>
 </div>
+<?php endif ;?>
 
 <section class="s-hero">
 	<div class="title">

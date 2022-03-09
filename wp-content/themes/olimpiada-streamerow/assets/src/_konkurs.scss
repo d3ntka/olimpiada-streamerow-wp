@@ -5,20 +5,97 @@
 
 
 .s-konkurs{
+    position: relative;
+    background: $primary url("../img/bg-influ.png");
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-size: cover;
     &__content{
+        position: relative;
         @extend .cont;
         padding-top: 17rem;
         padding-bottom: 11rem;
-
+        z-index: 50;
+        .title{
+            h1{
+                font-size: 4.6rem;
+                font-weight: 600;
+                letter-spacing: 0;
+                line-height: 1;
+                white-space: nowrap;
+            }
+        }
     }
+    &__subtitle{
+        font-size: 2.8rem;
+        font-weight: 400;
+        letter-spacing: 0px;
+        line-height: 1.1;
+        text-align: center;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+    }
+    &__kroki{
+        font-size: 1.8rem;
+        font-weight: 400;
+        display: flex;
+        // justify-content: center;
+        .lines{
+            &::before{
+                content: "";
+                background-image: url('../img/konkurs_kroki.png');
+                height: 49.5rem;
+                width: 4.66rem;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+            // height: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            display: inline-flex;
+            // min-height: 49.5rem;
+            // min-width: 5rem;
+            // img{
+            //     height: 49.5rem;
+            //     width: 4.66rem;
+            // }
+        }
+        p{
+            min-width: 40rem;
+            max-width: 44rem;
+            &:nth-child(1){
+                padding-bottom: 4.5rem;
+            }
+            &:nth-child(2){
+                padding-bottom: 7rem;
+            }
+            &:nth-child(3){
+                padding-bottom: 4.5rem;
+            }
+        }
+    }
+    &__krok-zgloszenie{
+        font-size: 3rem; 
+        letter-spacing: 0px;
+        font-weight: 400;
+
+       }
 
 
     &__submission{
-        @extend .cont;
-        background-color: $blue;
+
         padding-top: 3rem;
         // padding-bottom: 5rem;
         color: #fff;
+        @extend .cont;
+        position: relative;
+
+        &Wrap{
+        position: relative;
+        background-color: $blue;
+        }
         label{
             width: 100%;
         }
@@ -30,7 +107,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            margin-bottom: 8rem;
+            margin-bottom: 15rem;
             .wpcf7-submit{
                 transform: translateY(50%);
                 @extend .button;
@@ -102,6 +179,19 @@
                     border: 2px dashed #fff;
                     border-radius: 1rem;
                     padding-bottom: 1rem;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        background-image: url('../img/ic-pliki.png');
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 4.8rem;
+                        height: 4.8rem;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                    }
                 }
                 span{
                     font-size: 1.4rem;
@@ -150,3 +240,71 @@
     }
 }
 // /s-konkurs
+
+
+
+.tigerki-konkurs-1{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    background-image: url("../img/tigerki-konkurs-1.webp");
+    width: 33.8rem;
+    height: 36.9rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-110%);
+
+    @media (min-width:1920px){
+        left: 0;
+        transform: translateX(0);
+    }
+}
+
+.tigerki-konkurs-2{
+    position: absolute;
+    top: -6rem;
+    right: 20%;
+    background-image: url("../img/tigerki-konkurs-2.webp");
+    width: 24.2rem;
+    height: 43.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(150%);
+    @media (min-width:1920px){
+        right: 0;
+        transform: translateX(0);
+    }
+}
+
+.konkurs-influ-1{
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    background-image: url("../img/konkurs-influ-1.webp");
+    width: 60.1rem;
+    height: 83.2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(-70%);
+
+    @media (min-width:1920px){
+        left: 0;
+        transform: translateX(0);
+    }
+}
+.konkurs-influ-2{
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    background-image: url("../img/konkurs-influ-2.webp");
+    width: 56.5rem;
+    height: 75.2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translateX(70%);
+
+    @media (min-width:1920px){
+        right: 0;
+        transform: translateX(0);
+    }
+}
