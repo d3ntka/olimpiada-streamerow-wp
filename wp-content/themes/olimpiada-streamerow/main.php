@@ -50,7 +50,7 @@ the_post();
 			</h3>
 			<div class="olives">
 				<i class="olive-left-dark"></i>
-				<a class="button text-white" href="/vote">Zagłosuj</a>
+				<a class="button text-white" href="/konkurs">Weź udział</a>
 				<i class="olive-right-dark"></i>
 			</div>
 		</div>
