@@ -57,7 +57,7 @@ get_header();
 					</div>
 				</div>
 				<div>
-					Prace można zgłaszać do 16.03.2022 do 23:59
+					Prace można zgłaszać do 17.03.2022 do 23:59
 				</div>
 			</div>
 		</div>
